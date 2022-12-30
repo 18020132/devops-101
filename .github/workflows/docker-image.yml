@@ -21,7 +21,8 @@ jobs:
       uses: docker/login-action@v2
       with:
         username: ${{ secrets.DOCKER_HUB_USERNAME }}
-        password: ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}
+#         password: ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}
+        password: abcd
         
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag devops:latest
