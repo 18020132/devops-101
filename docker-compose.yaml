@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  devops:
+    image: daoducanhc/devops:latest
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./log.txt:/home/app/log.txt
+
+volumes:
+  devops:
+    driver: local
