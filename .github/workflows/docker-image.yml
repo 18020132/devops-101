@@ -10,11 +10,14 @@ on:
 jobs:
 
   staging:
-    if: github.ref == 'refs/heads/main' && github.ref == 'refs/heads/staging'
+    # if: github.ref == 'refs/heads/main' && github.ref == 'refs/heads/staging'
 
     runs-on: ubuntu-latest
 
     steps:
+    
+    - run: echo ${{github.ref}}
+    
     - name: Checkout
       uses: actions/checkout@v3
       
